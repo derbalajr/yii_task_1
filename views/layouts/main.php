@@ -34,13 +34,14 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <header id="header">
         <?php
         NavBar::begin([
-            // 'brandLabel' => Yii::$app->name,
+            'brandLabel' => Yii::$app->name,
             'brandUrl' => Yii::$app->homeUrl,
             'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top']
         ]);
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav'],
             'items' => [
+                ['label' => 'Home', 'url' => ['/site/index']],
                 ['label' => 'Country', 'url' => ['/country/index']],
                 ['label' => 'Freelancer', 'url' => ['/freelancer/index']],
                 ['label' => 'Contract', 'url' => ['/contract/index']],
